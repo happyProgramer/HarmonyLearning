@@ -1,0 +1,17 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/01/ComponentCase",
+    "pages/01/EventCase",
+    "pages/01/StateCase",
+    "pages/01/CounterCase",
+    "pages/01/ImageCase",
+    "pages/01/CommentsCase",
+    "pages/01/Style/StyleCase",
+    "pages/01/Style/ExtendCase",
+    "pages/01/Style/MultipleStyleCase",
+    "pages/01/ConditionCase/ConditionCase",
+    "pages/01/LoadingCase",
+    "pages/01/ForLoop/ForLoopCase"
+  ]
+}
