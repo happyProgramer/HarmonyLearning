@@ -75,6 +75,9 @@ struct ZhihuCase {
     this.list.splice(index, 0, item)
   }
 
+  addComment(item: ReplyItem) {
+    this.list.unshift(item) // 这是将item插入到顶部的操作
+  }
   build() {
     Stack({alignContent: Alignment.Bottom}) {
       Scroll() {
@@ -101,25 +104,49 @@ struct ZhihuCase {
             }})
           })
         }
-      }
+      } // scroll 只能放一个组件，步步为坑
       .padding({
         bottom: 50
       })
-      ReplyInput()
+      ReplyInput({addItem: (item: ReplyItem) => {
+        this.addComment(item)
+      }})
     }
   }
 }
 
 @Component
 struct ReplyInput {
+  @State replyStr: string = ''
+  addItem:(item: ReplyItem) => void = () => {}
   build() {
     Row() {
-      TextInput({placeholder: '回复～'})
+      TextInput({placeholder: '回复～',text: this.replyStr})
         .layoutWeight(1)
+        .onChange((value)=> {
+          this.replyStr = value
+        })
       Text('发布')
         .fontColor('#6ecff0')
         .margin({
           left: 10
+        })
+        .onClick(()=>{
+          if (this.replyStr !== '') { // 处理边际情况，什么都不输入的时候不能发布
+            // 传值给外界调用
+            let addItem: ReplyItem = {
+              id: Date.now(),
+              avatar: '/assets/test.jpeg',
+              author: '喵星人',
+              content:this.replyStr,
+              time: `${new Date().getMonth() + 1}-${new Date().getDate()}`, // 日期默认是0-11，所以要+1
+              area: '北京',
+              likeNum : 0,
+              likeFlag : false
+            }
+            this.addItem(addItem)
+            this.replyStr = ''
+          }
         })
     }
     .border({

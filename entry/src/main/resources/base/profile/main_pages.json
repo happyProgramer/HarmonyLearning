@@ -13,6 +13,13 @@
     "pages/01/ConditionCase/ConditionCase",
     "pages/01/LoadingCase",
     "pages/01/ForLoop/ForLoopCase",
-    "pages/01/zhihu/ZhihuCase"
+    "pages/01/zhihu/ZhihuCase",
+    "pages/02/BuilderCase",
+    "pages/02/BuilderCase2",
+    "pages/02/BuildParams",
+    "pages/02/PropCase",
+    "pages/02/LinkCase",
+    "pages/02/ProvideCase",
+    "pages/02/ProvideCase2"
   ]
 }
