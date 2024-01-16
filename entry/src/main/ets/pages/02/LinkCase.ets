@@ -37,9 +37,9 @@ struct LinkCase {
           // 不能这么写，会报错The regular property 'card' cannot be assigned to the @Link property 'food'.
           // 因为Link只支持修改的数据必须得是最外层的 State数据，多一层都不行
           // 也有解决办法，就是ObjectLink 和Observerd会解决这个问题，之后再探讨
-          // ForEach(this.cardList,(card: FoodClass)=>{
-          //   FoodItem({food:$card})
-          // })
+          ForEach(this.cardList,(card: FoodClass)=>{
+            FoodItem({food:$card})
+          })
         }
         .layoutWeight(1)
         Column() {
@@ -62,6 +62,7 @@ struct LinkCase {
     }
     .height('100%')
   }
+
 }
 
 class FoodClass {

@@ -20,6 +20,11 @@
     "pages/02/PropCase",
     "pages/02/LinkCase",
     "pages/02/ProvideCase",
-    "pages/02/ProvideCase2"
+    "pages/02/ProvideCase2",
+    "pages/03/ObjectLinkCase",
+    "pages/03/CustomInterfaceTool",
+    "pages/01/TestCase123",
+    "pages/03/ObjectLinkZhihuCase",
+    "pages/03/MultiStateCase"
   ]
 }

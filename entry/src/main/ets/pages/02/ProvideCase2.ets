@@ -5,7 +5,6 @@ import promptAction from '@ohos.promptAction';
 struct ProvideCase2 {
   @Provide('aa')
   // state, prop,link 都在watch前面，放在修饰符下面,第一次初始化的时候，@Watch不会被调用
-  //
   @Watch('updateCount')
   money: number = 0
   updateCount(keyName: string) {
