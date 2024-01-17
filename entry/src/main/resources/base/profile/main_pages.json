@@ -25,6 +25,10 @@
     "pages/03/CustomInterfaceTool",
     "pages/01/TestCase123",
     "pages/03/ObjectLinkZhihuCase",
-    "pages/03/MultiStateCase"
+    "pages/03/MultiStateCase",
+    "pages/03/LocalStorageCase",
+    "pages/03/LocalStorageCase2",
+    "pages/03/AppStorageCase",
+    "pages/03/AppStorageCase2"
   ]
 }
